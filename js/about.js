@@ -102,6 +102,7 @@ $(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    // mousewheel: true,
   });
 });
 
@@ -150,10 +151,14 @@ window.addEventListener("load", () => {
     stagger: 0.5,
   });
 
-  about1TL.from(".mid-element .mid-txt > p", {
-    y: 50,
-    autoAlpha: 0,
-  });
+  about1TL.from(
+    ".mid-element .mid-txt > p",
+    {
+      x: 50,
+      autoAlpha: 0,
+    },
+    ">"
+  );
 
   about1TL.from(".scroll-txt", {
     autoAlpha: 0,

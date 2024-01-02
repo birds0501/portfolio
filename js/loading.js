@@ -24,7 +24,7 @@ $(function () {
       //1초 후에 로딩요소 지우기
       setTimeout(function () {
         $target.remove();
-      }, 2000);
+      }, 500);
     }, 1000);
   });
 });

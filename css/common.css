@@ -107,6 +107,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* visibility: hidden; */
 }
 
 .logo a {

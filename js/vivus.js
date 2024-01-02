@@ -15,10 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 애니메이션이 완료된 후에 1.5초 후에 GSAP 애니메이션 실행
     setTimeout(function () {
-      mMouseMoving();
       mainGSAPAnimation();
     }, 1500);
-  }, 1500);
+
+    setTimeout(function () {
+      mMouseMoving();
+    }, 3500);
+  }, 1200);
 });
 
 function mainGSAPAnimation() {
@@ -26,31 +29,47 @@ function mainGSAPAnimation() {
 
   maintl.from(".harmony img", {
     y: 30,
-    duration: 0.5,
+    duration: 0.6,
     autoAlpha: 0,
-    delay: 0.3,
+    delay: 0.1,
   });
 
   maintl.from(
     ".exp",
     {
       y: 20,
-      duration: 0.5,
+      duration: 0.3,
       autoAlpha: 0,
     },
     "<"
   );
 
+  maintl.from("nav", {
+    y: -20,
+    duration: 0.4,
+    autoAlpha: 0,
+    delay: 0.1,
+  });
+
   maintl.from(
     ".side-text p",
     {
-      x: 20,
-      duration: 0.5,
+      y: -20,
+      duration: 0.4,
       autoAlpha: 0,
       stagger: 0.1,
       delay: 0.5,
     },
     "-=.4"
+  );
+  maintl.from(
+    ".go-pro-btn a",
+    {
+      x: 5,
+      duration: 0.2,
+      autoAlpha: 0,
+    },
+    "<"
   );
 }
 

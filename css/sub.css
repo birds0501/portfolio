@@ -179,18 +179,19 @@
 /* 인디케이터 디자인 (색상 변경은 js)*/
 
 .projectSlide .swiper-pagination {
-  padding: 20px 0;
+  padding: 0 1%;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-vertical.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  margin: 0 20px;
+  margin: 35px 0;
 }
 
 .projectSlide .swiper-pagination-bullet {
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 10px;
+
   transition: 0.4s;
 }
 
@@ -341,7 +342,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(0, 0, 0, 0.8);
+  color: #000;
 }
 
 .swiper-button-next:after,
@@ -396,8 +397,8 @@ body {
 
 .mid-element .mid-txt p {
   position: absolute;
-  bottom: 30%;
-  right: 28%;
+  bottom: 45%;
+  right: 26%;
   font-weight: 300;
   font-size: 4rem;
   visibility: hidden;
@@ -478,6 +479,64 @@ body {
   margin-top: 10%;
 }
 
+.arrow {
+  width: 17.3em;
+  height: 17.3rem;
+  background: url(../img/arrow.svg) no-repeat 50% / cover;
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  animation: arrow 2s infinite both;
+  transition: 0.4s;
+}
+
+.arrow.Down {
+  width: 17.3em;
+  height: 17.3rem;
+  background: url(../img/arrow-down.svg) no-repeat 50% / cover;
+  position: absolute;
+  bottom: 15%;
+  right: 8%;
+  animation: arrowDown 2s infinite both;
+  transition: 0.4s;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(40px);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: translateX(0px);
+    animation-timing-function: ease-in;
+    transition: 0.4s;
+  }
+
+  100% {
+    transform: translateX(40px);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes arrowDown {
+  0% {
+    transform: translateY(40px);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: translateY(0px);
+    animation-timing-function: ease-in;
+    transition: 0.4s;
+  }
+
+  100% {
+    transform: translateY(40px);
+    animation-timing-function: ease-out;
+  }
+}
+
 .image02 {
   width: 54rem;
   height: 54rem;
@@ -499,18 +558,18 @@ body {
   left: 15rem;
 }
 
-.hashtag {
-  margin-top: 8rem;
-  display: flex;
-  gap: 1.7rem;
-}
-
 .image04 {
   width: 54rem;
   height: 54rem;
   border-radius: 50%;
-  background: #000;
+  background: url(../img/KakaoTalk_20240102_010843986.jpg) no-repeat 50% / cover;
   margin-top: 10%;
+}
+
+.hashtag {
+  margin-top: 8rem;
+  display: flex;
+  gap: 1.7rem;
 }
 
 .hashtag p {

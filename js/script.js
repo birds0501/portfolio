@@ -2,13 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // <!-- Initialize Swiper(project) -->
 
   var projectSlide = new Swiper(".projectSlide", {
-    // direction: "vertical",
-    // effect: "fade",
-    // fadeEffect: true,
+    direction: "vertical",
+
     // navigation: {
     //   nextEl: ".swiper-button-next",
     //   prevEl: ".swiper-button-prev",
     // },
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    },
+    speed: 800,
+    mousewheel: true,
+    loop: true,
+    disableOnInteraction: false,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -100,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "#midDoor path": {
           fill: "#405E00",
           stroke: "#fff",
-          opacity: "0.5",
+          opacity: "0.7",
         },
         ".gnb li a": {
           color: "#fff",
