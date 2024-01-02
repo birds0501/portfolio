@@ -1,0 +1,101 @@
+@charset 'utf-8';
+
+/* side-text */
+.side-text {
+  /* background: #f5f; */
+  display: block;
+  position: absolute;
+  top: 28rem;
+  right: -5.5rem;
+  transform: rotate(90deg);
+}
+
+.side-text > p {
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 5rem;
+  visibility: hidden;
+}
+
+.side-text p + p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  visibility: hidden;
+}
+
+/* bottom-text */
+.bottom-text {
+  /* background: #ff5; */
+  position: absolute;
+  left: 10.3rem;
+  bottom: 7.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: start;
+  row-gap: 1.2rem;
+}
+
+.harmony img {
+  visibility: hidden;
+}
+
+.exp {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 2.2rem;
+  visibility: hidden;
+}
+
+.exp p {
+  font-family: "Ibarra Real Nova", serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.bottom-text strong {
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+/* main-visual */
+.main-visual .line-right {
+  position: absolute;
+  right: 0;
+  bottom: 31.7rem;
+}
+
+.main-visual .line-left {
+  position: absolute;
+  left: 0;
+  bottom: 8rem;
+  z-index: 5;
+  width: 116.2rem;
+  height: 70.3rem;
+}
+
+.main-visual .main-circle {
+  position: absolute;
+  z-index: 3;
+  left: 66rem;
+  top: 17rem;
+  width: 580px;
+  height: 580px;
+  background: url(../img/main-visual-circle.svg) no-repeat 50% / cover;
+}
+
+#lineLeft {
+  stroke: color #444;
+}
+
+/* .loaded-screen {
+  background: url(../img/white-bg.jpg);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  clip-path: circle(5% at 50% 50%);
+} */
