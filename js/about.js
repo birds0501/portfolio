@@ -5,9 +5,6 @@ $(function () {
     anchors: ["about1", "about2", "about3"],
     //navigation: true,
 
-    //인디케이터 커스텀(menu적용)
-    //1.html body맨 상단에 붙여놓고 script에 정의
-    //2.css로 #indicatorMenu잡고 변경해주기
     menu: "#aboutMenu",
     scrollingSpeed: 1000,
 
@@ -16,12 +13,11 @@ $(function () {
 
     //섹션의 컨텐츠가 수직을 기준으로 중앙에 위치하도록
     verticalCentered: false,
+  });
 
-    afterLoad: function (origin, destination, direction) {
-      if (destination.index === 2) {
-        about2GSAPAnimation();
-      }
-    },
+  $(document).on("click", ".Down", function (e) {
+    e.preventDefault();
+    $.fn.fullpage.moveSectionDown();
   });
 
   // about1 circle 움직임---------------------------------------
@@ -99,7 +95,7 @@ $(function () {
     //   type: "fraction",
     // },
     navigation: {
-      nextEl: ".swiper-button-next",
+      nextEl: ".swiper-button-next, .arrow",
       prevEl: ".swiper-button-prev",
     },
     // mousewheel: true,
@@ -112,7 +108,6 @@ $(function () {
   const $cursor = $(".cursor");
 
   $window.on("mousemove", function (e) {
-    console.log(e);
     let mouseX = e.pageX;
     let mouseY = e.pageY;
 
@@ -147,7 +142,7 @@ window.addEventListener("load", () => {
   about1TL.from(".mid-element .mid-txt > img", {
     y: 50,
     autoAlpha: 0,
-    delay: 2,
+    delay: 1,
     stagger: 0.5,
   });
 
@@ -159,6 +154,12 @@ window.addEventListener("load", () => {
     },
     ">"
   );
+
+  about1TL.from(".mid-element .mid-txt b", {
+    clipPath: "inset(50% 0% 50% 0%)",
+    duration: 1,
+    ease: "power4.inOut",
+  });
 
   about1TL.from(".scroll-txt", {
     autoAlpha: 0,

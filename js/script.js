@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
           $(".txt-con .pro-txt strong").eq(sIdx).fadeIn(500);
           $(".txt-con .pro-txt .pro-info").hide();
           $(".txt-con .pro-txt .pro-info").eq(sIdx).fadeIn(500);
+          $(".txt-con .pro-txt .pro-exp").hide();
+          $(".txt-con .pro-txt .pro-exp").eq(sIdx).fadeIn(500);
 
           // 텍스트
           // $(".door-wrap .pro-mid-door").fadeOut(200);
@@ -59,9 +61,16 @@ document.addEventListener("DOMContentLoaded", () => {
           opacity: "0.8",
         },
 
-        ".gnb li a": {
+        ".gnb li:nth-child(2)": {
           color: "#000",
         },
+        ".gnb li:nth-child(3)": {
+          color: "#000",
+        },
+
+        // ".gnb li": {
+        //   color: "#000",
+        // },
 
         ".logo a": {
           filter: "invert(0)",
@@ -80,11 +89,18 @@ document.addEventListener("DOMContentLoaded", () => {
       // 슬라이드 2의 스타일
       {
         "#midDoor path": {
-          fill: "#005788",
+          fill: "#00659D",
           stroke: "#fff",
           opacity: "0.5",
         },
-        ".gnb li a": {
+        // ".gnb li a": {
+        //   color: "#fff",
+        // },
+
+        ".gnb li:nth-child(2)": {
+          color: "#fff",
+        },
+        ".gnb li:nth-child(3)": {
           color: "#fff",
         },
 
@@ -109,7 +125,14 @@ document.addEventListener("DOMContentLoaded", () => {
           stroke: "#fff",
           opacity: "0.7",
         },
-        ".gnb li a": {
+        // ".gnb li a": {
+        //   color: "#fff",
+        // },
+
+        ".gnb li:nth-child(2)": {
+          color: "#fff",
+        },
+        ".gnb li:nth-child(3)": {
           color: "#fff",
         },
 
@@ -216,7 +239,9 @@ $(function () {
         $(".bg-color-list .color").eq(sIdx).fadeIn(600);
 
         $(".logo a").css({ filter: "invert(1)" });
-        $(".gnb li a").css({ color: "#fff" });
+        $(".gnb li:nth-child(3), .gnb li:nth-child(1)").css({
+          color: "#fff",
+        });
       },
     },
   });

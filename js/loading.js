@@ -3,12 +3,7 @@ $(function () {
   //대상을 변수에 저장
   const $window = $(window);
   const $body = $("body");
-  const $loading = `<div class="loading" style="background : #fff">
-  <div class="spinner">
-  <div class="double-bounce1"></div>
-  <div class="double-bounce2"></div>
-</div>
-  </div>`; //html에서 잘 돌아가는지 확인 후 스크립트로 붙이기(모든 페이지에 로딩 페이지가 들어가야 하므로)
+  const $loading = $(".loading"); //html에서 잘 돌아가는지 확인 후 스크립트로 붙이기(모든 페이지에 로딩 페이지가 들어가야 하므로)
 
   //body의 마지막 부분에 집어넣기
   $body.append($loading);

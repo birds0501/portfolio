@@ -1,11 +1,15 @@
 @charset 'utf-8';
 
+nav {
+  visibility: hidden;
+}
+
 /* side-text */
 .side-text {
   /* background: #f5f; */
   display: block;
   position: absolute;
-  top: 28rem;
+  top: 26%;
   right: -5.5rem;
   transform: rotate(90deg);
 }
@@ -18,17 +22,18 @@
 
 .side-text p + p {
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 300;
   visibility: hidden;
+  margin-left: 1%;
 }
 
 /* bottom-text */
 .bottom-text {
   /* background: #ff5; */
   position: absolute;
-  left: 10.3rem;
-  bottom: 7.5rem;
+  left: 5%;
+  bottom: 8%;
   display: flex;
   flex-direction: column-reverse;
   align-items: start;
@@ -63,25 +68,27 @@
 .main-visual .line-right {
   position: absolute;
   right: 0;
-  bottom: 31.7rem;
+  bottom: 30%;
+  width: 64.5313%;
+  height: auto;
 }
 
 .main-visual .line-left {
   position: absolute;
   left: 0;
-  bottom: 8rem;
+  bottom: 10%;
   z-index: 5;
-  width: 116.2rem;
-  height: 70.3rem;
+  width: 60.520833%;
+  height: auto;
 }
 
 .main-visual .main-circle {
   position: absolute;
   z-index: 3;
-  left: 66rem;
-  top: 17rem;
-  width: 580px;
-  height: 580px;
+  left: 35%;
+  top: 19%;
+  width: 30.2083%;
+  aspect-ratio: 1/1;
   background: url(../img/main-visual-circle.svg) no-repeat 50% / cover;
 }
 
@@ -119,63 +126,6 @@
   color: #fff !important;
   animation: jello-horizontal 1.2s both;
 }
-
-/* @-webkit-keyframes shake-horizontal {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70% {
-    -webkit-transform: translateX(-10px);
-    transform: translateX(-10px);
-  }
-  20%,
-  40%,
-  60% {
-    -webkit-transform: translateX(10px);
-    transform: translateX(10px);
-  }
-  80% {
-    -webkit-transform: translateX(8px);
-    transform: translateX(8px);
-  }
-  90% {
-    -webkit-transform: translateX(-8px);
-    transform: translateX(-8px);
-  }
-}
-@keyframes shake-horizontal {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70% {
-    -webkit-transform: translateX(-10px);
-    transform: translateX(-10px);
-  }
-  20%,
-  40%,
-  60% {
-    -webkit-transform: translateX(10px);
-    transform: translateX(10px);
-  }
-  80% {
-    -webkit-transform: translateX(8px);
-    transform: translateX(8px);
-  }
-  90% {
-    -webkit-transform: translateX(-8px);
-    transform: translateX(-8px);
-  }
-} */
 
 @-webkit-keyframes jello-horizontal {
   0% {

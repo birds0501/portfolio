@@ -17,8 +17,7 @@ body {
   font: 1rem/1.5 "Pretendard", sans-serif;
   background: url(../img/background.jpg) no-repeat 0 0 / cover;
   overflow: hidden;
-  /* clip-path: circle(0% at 50% 50%);
-  animation: ani 1s both; */
+  background-attachment: fixed;
 }
 
 @keyframes ani {
@@ -38,6 +37,7 @@ a {
 a:hover {
   text-decoration: none;
   color: var(--main-color) !important;
+  font-weight: 500;
   transition: 0.3s;
 }
 
@@ -69,8 +69,8 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 15px;
-  height: 15px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: var(--main-color);
   pointer-events: none;
@@ -156,9 +156,8 @@ nav {
 }
 
 .spinner {
-  width: 60px;
-  height: 60px;
-
+  width: 70px;
+  height: 70px;
   position: relative;
   margin: 100px auto;
 }
