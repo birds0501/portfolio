@@ -205,13 +205,13 @@ document.addEventListener("DOMContentLoaded", () => {
 $(function () {
   // graphic slider--------------------------------
   const cardSlider = new Swiper(".swiper.card-slider", {
-    speed: 1200,
+    speed: 1000,
     slidesPerView: "auto",
     slidesPerGroup: 1,
     centeredSlides: true,
     loop: true,
 
-    // slideToClickedSlide: true,
+    slideToClickedSlide: true,
     // loopAdditionalSlides: 1,
     autoplay: {
       delay: 2500,
@@ -243,6 +243,134 @@ $(function () {
           color: "#fff",
         });
       },
+
+      click: function () {
+        const $dim = $(".dim");
+        const $popup = $(".popup");
+        const $galleryContent = $(".gallery-content");
+        const $btnClose = $(".btn-close");
+        const $btnNext = $(".btn-next");
+        const $btnPrev = $(".btn-prev");
+        const $gallery = $(".swiper-slide");
+
+        $gallery.on("click", function () {
+          const $window = $(window);
+          $dim.fadeIn();
+          $popup.addClass("active");
+          const $target = $(this).find("img");
+          const imgSrc = $target.attr("src");
+
+          if (imgSrc) {
+            $("<img/>")
+              .on("load", function () {
+                $galleryContent.html(`<img src="${imgSrc}"/>`);
+                $(".gallery-content img").css({
+                  "object-fit": "cover",
+                  height: "100%",
+                  width: "100%",
+                });
+                $popup.css("width", $window.outerWidth() / 3);
+              })
+              .attr("src", imgSrc);
+          }
+        });
+
+        function close() {
+          $dim.fadeOut();
+          $popup.removeClass("active");
+          // $galleryContent.html("");
+          $popup.css("width", "");
+        }
+
+        $dim.on("click", function () {
+          close();
+        });
+
+        $btnClose.on("click", function () {
+          close();
+        });
+
+        $btnNext.on("click", function () {
+          // 현재 활성화된 슬라이드의 인덱스 가져오기
+          const currentIndex = cardSlider.activeIndex;
+
+          // 다음 슬라이드의 인덱스 계산
+          const nextIndex = (currentIndex + 1) % cardSlider.slides.length;
+
+          // 다음 슬라이드의 이미지 가져오기
+          const $nextSlide = cardSlider.slides.eq(nextIndex);
+          const $nextImage = $nextSlide.find("img");
+          const nextImgSrc = $nextImage.attr("src");
+
+          // 다음 슬라이드의 이미지를 $galleryContent에 설정
+          if (nextImgSrc) {
+            $("<img/>")
+              .on("load", function () {
+                $galleryContent.html(`<img src="${nextImgSrc}"/>`);
+                $(".gallery-content img").css({
+                  "object-fit": "cover",
+                  height: "100%",
+                  width: "100%",
+                });
+                $popup.css("width", $(window).outerWidth() / 3);
+              })
+              .attr("src", nextImgSrc);
+          }
+
+          // cardSlider의 다음 슬라이드로 이동
+          cardSlider.slideNext();
+        });
+
+        $btnPrev.on("click", function () {
+          // 현재 활성화된 슬라이드의 인덱스 가져오기
+          const currentIndex = cardSlider.activeIndex;
+
+          // 이전 슬라이드의 인덱스 계산
+          const prevIndex =
+            currentIndex === 0
+              ? cardSlider.slides.length - 1
+              : currentIndex - 1;
+
+          // 이전 슬라이드의 이미지 가져오기
+          const $prevSlide = cardSlider.slides.eq(prevIndex);
+          const $prevImage = $prevSlide.find("img");
+          const prevImgSrc = $prevImage.attr("src");
+
+          // 이전 슬라이드의 이미지를 $galleryContent에 설정
+          if (prevImgSrc) {
+            $("<img/>")
+              .on("load", function () {
+                $galleryContent.html(`<img src="${prevImgSrc}"/>`);
+                $(".gallery-content img").css({
+                  "object-fit": "cover",
+                  height: "100%",
+                  width: "100%",
+                });
+                $popup.css("width", $(window).outerWidth() / 3);
+              })
+              .attr("src", prevImgSrc);
+          }
+
+          // cardSlider의 이전 슬라이드로 이동
+          cardSlider.slidePrev();
+        });
+        // // esc 누를 때 지워짐
+        // $(document).keydown(function (e) {
+        //   if (e.keyCode == 27) {
+        //     close();
+        //   }
+        // });
+
+        $(".swiper-slide").on("click", function () {
+          cardSlider.autoplay.stop();
+        });
+        $dim.on("click", function () {
+          cardSlider.autoplay.start();
+        });
+        $btnClose.on("click", function () {
+          cardSlider.autoplay.start();
+        });
+      },
     },
   });
 });
@@ -253,7 +381,6 @@ $(function () {
   const $cursor = $(".cursor");
 
   $window.on("mousemove", function (e) {
-    console.log(e);
     let mouseX = e.clientX;
     let mouseY = e.clientY;
 
