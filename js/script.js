@@ -208,8 +208,8 @@ $(function () {
   const $cursor = $(".cursor");
 
   $window.on("mousemove", function (e) {
-    let mouseX = e.pageX + 50; // document의 x좌표값
-    let mouseY = e.pageY + 50; // document의 y좌표값
+    let mouseX = e.pageX; // document의 x좌표값
+    let mouseY = e.pageY; // document의 y좌표값
 
     $cursor.css({
       left: mouseX + "px",
