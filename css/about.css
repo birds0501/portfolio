@@ -126,13 +126,6 @@ body {
   height: 100%;
 }
 
-/* about1 */
-.mid-element {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-}
-
 .mid-txt {
   display: flex;
   align-items: end;
@@ -396,9 +389,10 @@ body {
   position: absolute;
   bottom: 17%;
   left: 12%;
-  background: url(../img/me.svg) no-repeat 50% / cover;
-  width: 68rem;
-  height: 60rem;
+  background: url(../img/me2.jpg) no-repeat 50% / cover;
+  height: 57%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
 }
 
 .contact-con {
@@ -469,178 +463,4 @@ body {
   100% {
     opacity: 1;
   }
-}
-
-/* graphic-------------------- */
-
-.graphic-wrap {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.bg-list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  user-select: none;
-}
-
-.bg-list::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: rgba(237, 129, 105, 0.6); */
-  backdrop-filter: blur(6px);
-  filter: saturate(0);
-}
-
-/* 배경에 들어갈 이미지 */
-.bg-list .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: no-repeat 50% / cover;
-}
-.bg-list .bg.bg01 {
-  background-image: url(../img/graphic01-pic.jpg);
-}
-.bg-list .bg.bg02 {
-  background-image: url(../img/pro-bg-3.jpg);
-}
-.bg-list .bg.bg03 {
-  background-image: url(../img/graphic01-pic.jpg);
-}
-.bg-list .bg.bg04 {
-  background-image: url(../img/pro-bg-3.jpg);
-}
-.bg-list .bg.bg05 {
-  background-image: url(../img/graphic01-pic.jpg);
-}
-.bg-list .bg.bg06 {
-  background-image: url(../img/pro-bg-3.jpg);
-}
-.bg-list .bg.bg07 {
-  background-image: url(../img/graphic01-pic.jpg);
-}
-
-/* 배경에 들어갈 컬러 */
-.bg-color-list .color {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.bg-color-list .color.bg-color01 {
-  background: rgba(237, 129, 105, 0.6);
-}
-.bg-color-list .color.bg-color02 {
-  background: rgba(50, 75, 0, 0.7);
-}
-.bg-color-list .color.bg-color03 {
-  background: rgba(237, 129, 105, 0.6);
-}
-.bg-color-list .color.bg-color04 {
-  background: rgba(50, 75, 0, 0.7);
-}
-.bg-color-list .color.bg-color05 {
-  background: rgba(237, 129, 105, 0.6);
-}
-.bg-color-list .color.bg-color06 {
-  background: rgba(50, 75, 0, 0.7);
-}
-.bg-color-list .color.bg-color07 {
-  background: rgba(237, 129, 105, 0.6);
-}
-
-/* graphic 슬라이더 */
-.card-slider {
-  padding: 22rem 0 9rem;
-}
-
-.card-slider .swiper-slide {
-  width: 33rem;
-  height: 45rem;
-  margin: 0 8rem;
-  border: 1px solid #000;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: 0.4s;
-}
-
-.card-slider .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* 활성화된 슬라이드 */
-/* .card-slider .swiper-slide.swiper-slide-active {
-  animation: up 1s both;
-  transition: 0.8s;
-} */
-
-@keyframes up {
-  100% {
-    transform: translateY(-20%);
-  }
-}
-
-/* 카드 각도 달라지는 효과 */
-.card-slider .swiper-slide:nth-child(even) {
-  transform: rotate(5deg);
-}
-.card-slider .swiper-slide:nth-child(odd) {
-  transform: rotate(-5deg);
-}
-.card-slider .swiper-slide:nth-child(even).on {
-  transform: rotate(-5deg);
-}
-.card-slider .swiper-slide:nth-child(odd).on {
-  transform: rotate(5deg);
-}
-
-/* 하단 제목 */
-.con-list {
-  position: absolute;
-  bottom: 16rem;
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 90rem;
-  z-index: 10;
-}
-
-.con-list .con {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  color: #fff;
-
-  display: none;
-}
-
-.con-list .con dt {
-  font-weight: 500;
-  font-size: 3.2rem;
-  font-family: "Ibarra Real Nova", serif;
-}
-
-.con-list .con dd {
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-family: "Montserrat", sans-serif;
-  margin-top: 0.5rem;
 }
