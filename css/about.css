@@ -335,7 +335,8 @@ body {
   height: 50%;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background: url(../img/KakaoTalk_20240102_010843986.jpg) no-repeat 50% / cover;
+  /* background: url(../img/me1.jpg) no-repeat 50% / cover; */
+  background: #d4d4d4;
   margin-top: 11%;
 }
 
