@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(function () {
           // 텍스트
-          $(".txt-con .pro-txt h2").fadeOut(100);
+          $(".txt-con .pro-txt h2").hide();
           $(".txt-con .pro-txt h2").eq(sIdx).fadeIn(500);
-          $(".txt-con .pro-txt strong").fadeOut(100);
+          $(".txt-con .pro-txt strong").hide();
           $(".txt-con .pro-txt strong").eq(sIdx).fadeIn(500);
-          $(".txt-con .pro-txt .pro-info").fadeOut(100);
+          $(".txt-con .pro-txt .pro-info").hide();
           $(".txt-con .pro-txt .pro-info").eq(sIdx).fadeIn(500);
-          $(".txt-con .pro-txt .pro-exp").fadeOut(100);
+          $(".txt-con .pro-txt .pro-exp").hide();
           $(".txt-con .pro-txt .pro-exp").eq(sIdx).fadeIn(500);
           $(".pro-link").hide();
           $(".pro-link").eq(sIdx).show();
@@ -180,6 +180,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
         ".projectSlide .swiper-pagination-bullet-active": {
           background: "#f3c968",
+          opacity: "1",
+        },
+      },
+      // 슬라이드 5의 스타일
+      {
+        "#midDoor path": {
+          fill: "#A7AEC6",
+          stroke: "#fff",
+          opacity: "0.7",
+        },
+        // ".gnb li a": {
+        //   color: "#fff",
+        // },
+
+        ".gnb li:nth-child(2)": {
+          color: "#fff",
+        },
+        ".gnb li:nth-child(3)": {
+          color: "#fff",
+        },
+
+        ".logo a": {
+          filter: "invert(100%)",
+        },
+
+        ".projectSlide .swiper-pagination-bullet": {
+          background: "#fff",
+          opacity: "0.3",
+        },
+
+        ".projectSlide .swiper-pagination-bullet-active": {
+          background: "#3284FF",
+          opacity: "1",
+        },
+      },
+      // 슬라이드 6의 스타일
+      {
+        "#midDoor path": {
+          fill: "#000",
+          stroke: "#fff",
+          opacity: "0.95",
+        },
+        // ".gnb li a": {
+        //   color: "#fff",
+        // },
+
+        ".gnb li:nth-child(2)": {
+          color: "#fff",
+        },
+        ".gnb li:nth-child(3)": {
+          color: "#fff",
+        },
+
+        ".logo a": {
+          filter: "invert(100%)",
+        },
+
+        ".projectSlide .swiper-pagination-bullet": {
+          background: "#fff",
+          opacity: "0.3",
+        },
+
+        ".projectSlide .swiper-pagination-bullet-active": {
+          background: "#F40F8B",
           opacity: "1",
         },
       },

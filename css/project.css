@@ -39,18 +39,20 @@
   margin-left: 0.4rem;
 }
 
+.txt02 h2,
+.txt03 h2,
+.txt04 h2,
+.txt05 h2,
+.txt06 h2 {
+  color: #fff;
+}
+
+/* pro-slide strong */
 .txt01 strong {
   display: block;
   margin-top: 2.5rem;
 }
 
-.txt02 h2,
-.txt03 h2,
-.txt04 h2 {
-  color: #fff;
-}
-
-/* pro-slide 2 strong */
 .txt02 strong {
   font-family: "Ibarra Real Nova", serif;
   display: block;
@@ -62,6 +64,13 @@
   line-height: 110%;
   margin-top: 2rem;
 }
+
+.txt03 strong {
+  font-weight: 600;
+  font-size: 7.5rem;
+  color: #d6e384;
+}
+
 .txt04 strong {
   font-family: "Ibarra Real Nova", serif;
   display: block;
@@ -74,11 +83,12 @@
   margin-top: 2rem;
 }
 
-/* pro-slide 3 strong */
-.txt03 strong {
-  font-weight: 600;
-  font-size: 7.5rem;
-  color: #d6e384;
+.txt05 strong img {
+  margin-top: 1.5rem;
+}
+
+.txt06 strong img {
+  margin-top: 2.7rem;
 }
 
 .txt01 .pro-exp {
@@ -138,6 +148,37 @@
   line-height: 195%;
 }
 
+.txt05 .pro-exp {
+  position: absolute;
+  top: 37rem;
+  left: 6.6rem;
+  z-index: 99;
+}
+
+.txt05 .pro-exp p {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 200;
+  font-size: 2vh;
+  color: #fff;
+  line-height: 195%;
+}
+
+.txt06 .pro-exp {
+  position: absolute;
+  top: 34rem;
+  left: 6.6rem;
+  z-index: 99;
+}
+
+.txt06 .pro-exp p {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 200;
+  font-size: 2vh;
+  color: #fff;
+  line-height: 195%;
+  opacity: 0.8;
+}
+
 .pro-info h3 {
   font-weight: 500;
   font-size: 2.1rem;
@@ -157,7 +198,9 @@
 /* pro-slide2,3 info색상 반전 */
 .txt02 .pro-info,
 .txt03 .pro-info,
-.txt04 .pro-info {
+.txt04 .pro-info,
+.txt05 .pro-info,
+.txt06 .pro-info {
   filter: invert(100%);
 }
 
@@ -266,18 +309,23 @@
 .bg04 .pic {
   background: url(../img/pro-bg-4.jpg) no-repeat 50% / cover;
 }
+.bg05 .pic {
+  background: url(../img/pro-bg-5.jpg) no-repeat 50% / cover;
+}
+.bg06 .pic {
+  background: url(../img/pro-bg-6.jpg) no-repeat 50% / cover;
+}
 
 /* 인디케이터 디자인 (색상 변경은 js)*/
 
 .projectSlide .swiper-pagination {
   padding: 0 1%;
-  z-index: 100;
 }
 
 .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-vertical.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  margin: 35px 0;
+  margin: 1vw 0;
 }
 
 .projectSlide .swiper-pagination-bullet {

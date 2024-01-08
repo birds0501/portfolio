@@ -219,13 +219,13 @@ body {
 .content p {
   font-weight: 300;
   font-size: 2vh;
-  width: 79.4rem;
+  /* width: 90rem; */
   line-height: 2;
 }
 
 .content p + p {
   display: block;
-  margin-top: 5.6rem;
+  margin-top: 4rem;
 }
 
 .exp-wrap {
@@ -233,9 +233,12 @@ body {
 }
 
 .swiper-slide.sym,
-.swiper-slide.breath,
 .swiper-slide.challenge {
   display: flex;
+  gap: 4%;
+}
+
+.swiper-slide.breath {
   gap: 7%;
 }
 
@@ -335,9 +338,8 @@ body {
   height: 50%;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  /* background: url(../img/me1.jpg) no-repeat 50% / cover; */
-  background: #d4d4d4;
-  margin-top: 11%;
+  background: url(../img/about-exp-pic04.jpg) no-repeat 50% / cover;
+  margin-top: 12%;
 }
 
 .hashtag {
@@ -379,7 +381,7 @@ body {
 /* about 3 */
 
 .my-photo {
-  height: 40%;
+  height: 45%;
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid #000;
@@ -411,14 +413,26 @@ body {
   margin-top: 3.2rem;
 }
 
-.epi {
+.epi h2 {
+  opacity: 0;
+  font-family: "Montserrat", sans-serif;
   width: 73.3rem;
-  /* background: #ff5; */
-  font-size: 3vh;
   font-weight: 300;
+  font-size: 8.3vh;
 }
-.epi b {
-  font-weight: 600;
+.epi h2.active {
+  animation: contact 0.6s both;
+}
+
+@keyframes contact {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .my-info {

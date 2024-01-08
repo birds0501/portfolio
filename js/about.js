@@ -13,6 +13,12 @@ $(function () {
 
     //섹션의 컨텐츠가 수직을 기준으로 중앙에 위치하도록
     verticalCentered: false,
+
+    afterLoad: function (anchorLink) {
+      if (anchorLink === "about3") {
+        $(".epi h2").addClass("active");
+      }
+    },
   });
 
   $(document).on("click", ".Down", function (e) {
