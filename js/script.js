@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       el: ".swiper-pagination",
       clickable: true,
     },
-    loop: true,
 
     on: {
       slideChange: function () {
@@ -30,14 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(function () {
           // 텍스트
-          $(".txt-con .pro-txt h2").hide();
+          $(".txt-con .pro-txt h2").fadeOut(100);
           $(".txt-con .pro-txt h2").eq(sIdx).fadeIn(500);
-          $(".txt-con .pro-txt strong").hide();
+          $(".txt-con .pro-txt strong").fadeOut(100);
           $(".txt-con .pro-txt strong").eq(sIdx).fadeIn(500);
-          $(".txt-con .pro-txt .pro-info").hide();
+          $(".txt-con .pro-txt .pro-info").fadeOut(100);
           $(".txt-con .pro-txt .pro-info").eq(sIdx).fadeIn(500);
-          $(".txt-con .pro-txt .pro-exp").hide();
+          $(".txt-con .pro-txt .pro-exp").fadeOut(100);
           $(".txt-con .pro-txt .pro-exp").eq(sIdx).fadeIn(500);
+          $(".pro-link").hide();
+          $(".pro-link").eq(sIdx).show();
 
           // 텍스트
           // $(".door-wrap .pro-mid-door").fadeOut(200);
@@ -147,6 +148,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
         ".projectSlide .swiper-pagination-bullet-active": {
           background: "#F6FFE2",
+          opacity: "1",
+        },
+      },
+      // 슬라이드 4의 스타일
+      {
+        "#midDoor path": {
+          fill: "#01003D",
+          stroke: "#fff",
+          opacity: "0.5",
+        },
+        // ".gnb li a": {
+        //   color: "#fff",
+        // },
+
+        ".gnb li:nth-child(2)": {
+          color: "#fff",
+        },
+        ".gnb li:nth-child(3)": {
+          color: "#fff",
+        },
+
+        ".logo a": {
+          filter: "invert(100%)",
+        },
+
+        ".projectSlide .swiper-pagination-bullet": {
+          background: "#fff",
+          opacity: "0.3",
+        },
+
+        ".projectSlide .swiper-pagination-bullet-active": {
+          background: "#f3c968",
           opacity: "1",
         },
       },

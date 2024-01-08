@@ -394,6 +394,7 @@ body {
   height: 57%;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  filter: saturate(0.8);
 }
 
 .contact-con {

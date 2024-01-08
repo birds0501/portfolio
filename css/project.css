@@ -45,7 +45,8 @@
 }
 
 .txt02 h2,
-.txt03 h2 {
+.txt03 h2,
+.txt04 h2 {
   color: #fff;
 }
 
@@ -57,6 +58,17 @@
   font-size: 6.8rem;
   font-weight: 600;
   color: #98e0ff;
+
+  line-height: 110%;
+  margin-top: 2rem;
+}
+.txt04 strong {
+  font-family: "Ibarra Real Nova", serif;
+  display: block;
+
+  font-size: 8rem;
+  font-weight: 600;
+  color: #f3c968;
 
   line-height: 110%;
   margin-top: 2rem;
@@ -91,12 +103,24 @@
   z-index: 99;
 }
 
-.txt02 .pro-exp p {
+.txt04 .pro-exp {
+  position: absolute;
+  top: 34rem;
+  left: 6.6rem;
+  z-index: 99;
+}
+
+.txt02 .pro-exp p,
+.txt04 .pro-exp p {
   font-family: "Pretendard", sans-serif;
   font-weight: 200;
   font-size: 2vh;
   color: #fff;
   line-height: 195%;
+}
+
+.txt04 .pro-exp p {
+  opacity: 0.7;
 }
 
 .txt03 .pro-exp {
@@ -132,7 +156,8 @@
 }
 /* pro-slide2,3 info색상 반전 */
 .txt02 .pro-info,
-.txt03 .pro-info {
+.txt03 .pro-info,
+.txt04 .pro-info {
   filter: invert(100%);
 }
 
@@ -238,15 +263,15 @@
 .bg03 .pic {
   background: url(../img/pro-bg-3.jpg) no-repeat 50% / cover;
 }
-
-.projectSlider .swiper-pagination {
-  z-index: 9999;
+.bg04 .pic {
+  background: url(../img/pro-bg-4.jpg) no-repeat 50% / cover;
 }
 
 /* 인디케이터 디자인 (색상 변경은 js)*/
 
 .projectSlide .swiper-pagination {
   padding: 0 1%;
+  z-index: 100;
 }
 
 .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
