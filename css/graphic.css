@@ -122,7 +122,7 @@
   width: 33rem;
   height: 45rem;
   margin: 0 8rem;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   border-radius: 20px;
   overflow: hidden;
   transition: 0.4s;
@@ -239,7 +239,7 @@
 }
 .gallery-content {
   overflow-y: auto;
-  max-height: 70vh; /* 세로 길이를 윈도우 창의 70%로 제한 */
+  max-height: 80vh; /* 세로 길이를 윈도우 창의 70%로 제한 */
 }
 
 .gallery-content img {
@@ -267,7 +267,7 @@
   position: absolute;
   top: -8%;
   right: 0;
-  padding: 10px;
+  padding: -10%;
   /* background: rgba(0, 0, 0, 0.4); */
   background: transparent;
   color: rgba(255, 255, 255, 0.8);

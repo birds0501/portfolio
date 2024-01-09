@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "#midDoor path": {
           fill: "#fff",
           stroke: "#000",
-          opacity: "0.8",
+          opacity: "0.7",
         },
 
         ".gnb li:nth-child(2)": {
@@ -92,7 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "#midDoor path": {
           fill: "#00659D",
           stroke: "#fff",
-          opacity: "0.5",
+          opacity: "0.8",
+          filter: "blur(0.8)",
         },
         // ".gnb li a": {
         //   color: "#fff",
@@ -124,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "#midDoor path": {
           fill: "#405E00",
           stroke: "#fff",
-          opacity: "0.7",
+          opacity: "0.8",
         },
         // ".gnb li a": {
         //   color: "#fff",
