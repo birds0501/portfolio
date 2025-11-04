@@ -108,40 +108,6 @@ $(function () {
   });
 });
 
-$(function () {
-  // 마우스 커서 커스텀-----------------
-  const $window = $(window);
-  const $cursor = $(".cursor");
-
-  $window.on("mousemove", function (e) {
-    let mouseX = e.pageX;
-    let mouseY = e.pageY;
-
-    $cursor.add($cursor).css({
-      left: mouseX,
-      top: mouseY,
-    });
-  });
-
-  //click 클래스 적용/삭제
-  $window.on("mousedown", function () {
-    $cursor.addClass("click");
-  });
-
-  $window.on("mouseup", function () {
-    $cursor.removeClass("click");
-  });
-
-  $("a").hover(
-    function () {
-      $cursor.addClass("click");
-    },
-    function () {
-      $cursor.removeClass("click");
-    }
-  );
-});
-
 window.addEventListener("load", () => {
   const about1TL = gsap.timeline();
 
