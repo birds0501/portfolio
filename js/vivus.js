@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   // main lineLeft, lineRight 애니매이션----------------
   setTimeout(function () {
+    document.querySelector(".line-left").style.opacity = "1";
+    document.querySelector(".line-right").style.opacity = "1";
+
     new Vivus("lineLeft", {
       duration: 200,
       type: "oneByOne",
