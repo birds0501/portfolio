@@ -44,8 +44,7 @@
   width: 100%;
   height: 100%;
   /* background: rgba(237, 129, 105, 0.6); */
-  backdrop-filter: blur(6px);
-  filter: saturate(0);
+  /* backdrop-filter: blur(2px); */
 }
 
 /* 배경에 들어갈 이미지 */
@@ -57,27 +56,11 @@
   height: 100%;
   background: no-repeat 50% / cover;
 }
-.bg-list .bg.bg01 {
-  background-image: url(../img/graphic01-pic.jpg);
-}
-/* .bg-list .bg.bg02 {
-  background-image: url(../img/pro-bg-3.jpg);
+
+/* .bg-list .bg.bg01 {
+  filter: grayscale(100%);
+  background-image: url(../img/graphic-02-bg\ .jpg);
 } */
-.bg-list .bg.bg03 {
-  background-image: url(../img/graphic01-pic.jpg);
-}
-/* .bg-list .bg.bg04 {
-  background-image: url(../img/pro-bg-3.jpg);
-} */
-.bg-list .bg.bg05 {
-  background-image: url(../img/graphic01-pic.jpg);
-}
-/* .bg-list .bg.bg06 {
-  background-image: url(../img/pro-bg-3.jpg);
-} */
-.bg-list .bg.bg07 {
-  background-image: url(../img/graphic01-pic.jpg);
-}
 
 /* 배경에 들어갈 컬러 */
 .bg-color-list .color {
@@ -87,35 +70,38 @@
   width: 100%;
   height: 100%;
 }
-.bg-color-list .color.bg-color01 {
-  background: rgba(0, 0, 0, 0.6);
+.bg-color-list .bg-color07 {
+  background: #c0b75a;
+  opacity: 0.7;
 }
-.bg-color-list .color.bg-color02 {
-  background: #6e4f00;
-  opacity: 0.5;
+.bg-color-list .bg-color06 {
+  background: #282720;
+  opacity: 0.7;
 }
-.bg-color-list .color.bg-color03 {
-  background: #919191;
-  opacity: 0.5;
+.bg-color-list .bg-color01 {
+  background: #760c0c;
+  /* opacity: 0.7; */
 }
-.bg-color-list .color.bg-color04 {
-  background: #b8b46b;
-  opacity: 0.5;
+.bg-color-list .bg-color02 {
+  background: #200e0e;
+  /* opacity: 0.7; */
 }
-.bg-color-list .color.bg-color05 {
-  background: rgb(179, 0, 0);
-  opacity: 0.5;
+.bg-color-list .bg-color05 {
+  background: #db2626;
+  opacity: 0.9;
 }
-.bg-color-list .color.bg-color06 {
-  background: rgba(0, 49, 7, 0.6);
+.bg-color-list .bg-color03 {
+  background: #b9b295;
+  /* opacity: 0.7; */
 }
-.bg-color-list .color.bg-color07 {
-  background: rgba(237, 129, 105, 0.6);
+.bg-color-list .bg-color04 {
+  background: #202a3e;
+  opacity: 0.9;
 }
 
 /* graphic 슬라이더 */
 .card-slider {
-  padding: 12% 0 9rem;
+  padding: 10% 0 9rem;
 }
 
 .card-slider .swiper-slide {
@@ -139,12 +125,6 @@
   height: 100%;
   object-fit: cover;
 }
-
-/* 활성화된 슬라이드 */
-/* .card-slider .swiper-slide.swiper-slide-active {
-  animation: up 1s both;
-  transition: 0.8s;
-} */
 
 @keyframes up {
   100% {
@@ -184,18 +164,17 @@
   height: 100%;
   text-align: center;
   color: #fff;
-
   display: none;
 }
 
 .con-list .con dt {
   font-weight: 500;
-  font-size: 3.3vh;
+  font-size: 3.5vh;
   font-family: "Ibarra Real Nova", serif;
 }
 
 .con-list .con dd {
-  font-size: 2.1vh;
+  font-size: 2.3vh;
   color: rgba(255, 255, 255, 0.6);
   font-family: "Montserrat", sans-serif;
   margin-top: 0.5rem;
@@ -254,7 +233,7 @@
 
 /* 스크롤바 막대 설정*/
 .gallery-content::-webkit-scrollbar-thumb {
-  background: #8f8f8f;
+  background: #313131;
   border-radius: 25px;
 }
 
@@ -268,7 +247,6 @@
   top: -8%;
   right: 0;
   padding: -10%;
-  /* background: rgba(0, 0, 0, 0.4); */
   background: transparent;
   color: rgba(255, 255, 255, 0.8);
   border: none;
@@ -277,46 +255,29 @@
   font-size: 2rem;
   font-weight: 300;
 }
-/* 
+
 .btn-next {
   position: fixed;
-  width: 20%;
-  height: 20%;
+  width: 21%;
+  height: 21%;
   right: 4%;
   float: right;
   top: 50%;
   transform: translateY(-50%);
   background: url(../img/next.png) right 48% no-repeat;
-  filter: alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
   z-index: 10000;
   cursor: pointer;
 }
 
-.btn-prev:hover,
-.btn-next:hover {
-  filter: alpha(Opacity=100);
-  opacity: 1;
-}
-
 .btn-prev {
   position: fixed;
-  width: 20%;
-  height: 20%;
+  width: 21%;
+  height: 21%;
   left: 4%;
   float: left;
   top: 50%;
   transform: translateY(-50%);
   background: url(../img/prev.png) left 48% no-repeat;
-  filter: alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
   z-index: 10000;
-} */
+  cursor: pointer;
+}

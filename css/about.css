@@ -338,7 +338,9 @@ body {
   height: 50%;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background: url(../img/about-exp-pic04.jpg) no-repeat 50% / cover;
+  background: url(../img/about-exp-pic05.jpg) no-repeat center / cover;
+  background-size: 140%;
+  background-position: 58% 60%;
   margin-top: 12%;
 }
 
@@ -381,11 +383,11 @@ body {
 /* about 3 */
 
 .my-photo {
-  height: 45%;
+  height: 40%;
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid #000;
-  /* background: url(../img/KakaoTalk_20240102_010843986.jpg) no-repeat 50% / cover; */
+  margin-left: 5%;
 }
 
 .me {
@@ -397,14 +399,16 @@ body {
   aspect-ratio: 1/1;
   border-radius: 50%;
   filter: saturate(0.8);
+  margin-left: 5%;
 }
 
 .contact-con {
   display: flex;
-  gap: 16rem;
+  justify-content: space-between;
+  /* gap: 16rem; */
   /* margin-top: 20.8rem; */
-  padding: 13% 0 0 0;
-  width: 1600px;
+  padding: 9% 0 0 0;
+  width: 1700px;
   height: 1700px;
   margin: 0 auto;
 }

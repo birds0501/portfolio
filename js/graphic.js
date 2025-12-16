@@ -3,14 +3,12 @@ $(function () {
   const cardSlider = new Swiper(".swiper.card-slider", {
     speed: 1400,
     slidesPerView: "auto",
-    // slidesPerGroup: 1,
     centeredSlides: true,
     loop: true,
 
     slideToClickedSlide: true,
-    // loopAdditionalSlides: 1,
     autoplay: {
-      delay: 2500,
+      delay: 3000,
       disableOnInteraction: false,
     },
 
@@ -22,8 +20,8 @@ $(function () {
 
         setTimeout(function () {
           // 배경
-          $(".bg-list .bg").fadeOut(200);
-          $(".bg-list .bg").eq(sIdx).fadeIn(600);
+          // $(".bg-list .bg").fadeOut(200);
+          // $(".bg-list .bg").eq(sIdx).fadeIn(600);
 
           // 텍스트
           $(".con-list .con").hide();
@@ -48,55 +46,72 @@ $(function () {
         const $btnNext = $(".btn-next");
         const $btnPrev = $(".btn-prev");
         const $gallery = $(".swiper-slide");
+        const $window = $(window);
 
-        $gallery.on("click", function () {
-          const $window = $(window);
-          $dim.fadeIn();
-          $popup.addClass("active");
-          const $target = $(this).find("img");
-          const imgSrc = $target.attr("src");
+        // ------------------------
+        // 팝업 이미지 업데이트 함수
+        // ------------------------
+        function updatePopupImage() {
+          const imgSrc = $(".swiper-slide-active img").attr("src");
 
           if (imgSrc) {
-            $("<img/>")
-              .on("load", function () {
-                $galleryContent.html(`<img src="${imgSrc}"/>`);
-                $(".gallery-content img").css({
-                  "object-fit": "cover",
-                  height: "100%",
-                  "max-width": "100%",
-                });
-                //           const windowWidth = $window.width();
-                // const maxPopupWidth = Math.min(windowWidth * 0.9);
-                // $popup.css('max-width', maxPopupWidth);
-                $popup.css("max-width", $window.outerWidth() / 3);
-              })
-              .attr("src", imgSrc);
+            $galleryContent.html(`<img src="${imgSrc}"/>`);
+            $(".gallery-content img").css({
+              "object-fit": "cover",
+              height: "100%",
+              "max-width": "100%",
+            });
+
+            $popup.css("max-width", $window.outerWidth() / 2.2);
           }
+        }
+
+        // ------------------------
+        // 슬라이드 클릭 → 팝업 열기
+        // ------------------------
+        $gallery.on("click", function () {
+          $dim.fadeIn();
+          $popup.addClass("active");
+
+          updatePopupImage(); // 팝업 이미지 세팅
+          cardSlider.autoplay.stop();
         });
 
+        // ------------------------
+        // 팝업 닫기
+        // ------------------------
         function close() {
           $dim.fadeOut();
           $popup.removeClass("active");
-          // $galleryContent.html("");
           $popup.css("width", "");
+          cardSlider.autoplay.start();
         }
 
-        $dim.on("click", function () {
-          close();
+        $dim.on("click", close);
+        $btnClose.on("click", close);
+
+        // ------------------------
+        // NEXT 버튼
+        // ------------------------
+        $btnNext.on("click", function (e) {
+          e.stopPropagation();
+          cardSlider.slideNext();
+
+          setTimeout(function () {
+            updatePopupImage();
+          });
         });
 
-        $btnClose.on("click", function () {
-          close();
-        });
+        // ------------------------
+        // PREV 버튼
+        // ------------------------
+        $btnPrev.on("click", function (e) {
+          e.stopPropagation();
+          cardSlider.slidePrev();
 
-        $(".swiper-slide").on("click", function () {
-          cardSlider.autoplay.stop();
-        });
-        $dim.on("click", function () {
-          cardSlider.autoplay.start();
-        });
-        $btnClose.on("click", function () {
-          cardSlider.autoplay.start();
+          setTimeout(function () {
+            updatePopupImage();
+          });
         });
       },
     },

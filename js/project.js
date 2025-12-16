@@ -64,15 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
           opacity: "0.2",
         },
         ".projectSlide .swiper-pagination-bullet-active": {
-          background: "#000",
+          background: "#f49003ff",
           opacity: "1",
         },
       },
       {
         "#midDoor path": {
-          fill: "#00659D",
-          stroke: "#fff",
-          opacity: "0.8",
+          fill: "#241603ff",
+          stroke: "#b9b9b9ff",
+          opacity: "0.85",
           filter: "blur(0.8)",
         },
         ".gnb li:nth-child(2)": { color: "#fff" },
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
           opacity: "0.2",
         },
         ".projectSlide .swiper-pagination-bullet-active": {
-          background: "#C6D7E4",
+          background: "#c3b79cff",
           opacity: "1",
         },
       },

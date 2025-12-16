@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Process Page</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #f8f8ef;
+      }
+
+      figure {
+        width: 100%;
+      }
+
+      img {
+        vertical-align: top;
+        width: 100%;
+      }
+
+      .video-wrap {
+        width: 70%;
+        margin: 12rem auto;
+        padding: 1rem 0 4rem;
+        background: #000;
+
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .video-wrap.show {
+        opacity: 1;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        /* border: 1.3px solid #333; */
+        /* border-radius: 6px; */
+      }
+    </style>
+  </head>
+  <body>
+    <figure><img src="./img/smn-process-01.jpg" alt="" /></figure>
+    <div class="video-wrap">
+      <video src="./video/smn-demo.mp4" autoplay loop muted></video>
+    </div>
+    <figure><img src="./img/smn-process-03.jpg" alt="" /></figure>
+    <!-- 비디오 먼저 로딩 방지 -->
+    <script>
+      const video = document.querySelector("video");
+      const wrap = document.querySelector(".video-wrap");
+
+      video.addEventListener("loadeddata", () => {
+        wrap.classList.add("show");
+      });
+    </script>
+  </body>
+</html>

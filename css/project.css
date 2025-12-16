@@ -39,12 +39,16 @@
   margin-left: 0.4rem;
 }
 
+.txt02 h2 {
+  font-weight: 600;
+}
+
 .txt02 h2,
 .txt03 h2,
 .txt04 h2,
 .txt05 h2,
 .txt06 h2 {
-  color: #fff;
+  color: #f8f8f8;
 }
 
 /* pro-slide strong */
@@ -57,11 +61,11 @@
   font-family: "Ibarra Real Nova", serif;
   display: block;
 
-  font-size: 6.8rem;
+  font-size: 6rem;
   font-weight: 600;
-  color: #98e0ff;
+  color: #fff2d3;
 
-  line-height: 110%;
+  line-height: 100%;
   margin-top: 2rem;
 }
 
@@ -74,11 +78,9 @@
 .txt04 strong {
   font-family: "Ibarra Real Nova", serif;
   display: block;
-
   font-size: 8rem;
   font-weight: 600;
   color: #f3c968;
-
   line-height: 110%;
   margin-top: 2rem;
 }
@@ -108,7 +110,7 @@
 
 .txt02 .pro-exp {
   position: absolute;
-  top: 40rem;
+  top: 38rem;
   left: 6.6rem;
   z-index: 99;
 }
@@ -301,7 +303,7 @@
   background: url(../img/pro-bg-1.jpg) no-repeat 50% / cover;
 }
 .bg02 .pic {
-  background: url(../img/pro-bg-2.jpg) no-repeat 50% / cover;
+  background: url(../img/pro-bg-2-1.jpg) no-repeat 50% / cover;
 }
 .bg03 .pic {
   background: url(../img/pro-bg-3.jpg) no-repeat 50% / cover;
