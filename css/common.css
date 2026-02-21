@@ -14,7 +14,9 @@ html {
 }
 
 body {
-  font: 1rem/1.5 "Pretendard", sans-serif;
+  font:
+    1rem/1.5 "Pretendard",
+    sans-serif;
   background: url(../img/background.jpg) no-repeat 0 0 / cover;
   overflow: hidden;
   background-attachment: fixed;
